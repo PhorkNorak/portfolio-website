@@ -1,0 +1,138 @@
+/* Add this to your main stylesheet (styles.css or frs-styles.css) */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  background-image: url("bg.png"); /* Replace with your image URL */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 50px auto;
+  position: relative;
+}
+
+header {
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2em;
+  margin: 0;
+  padding: 20px;
+}
+
+header nav {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+/* Add this to your main stylesheet (styles.css or frs-styles.css) */
+nav .back-button {
+  background-color: transparent;
+  color: #000;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 1.5em;
+  position: absolute; /* Make the back button position absolute */
+  top: 10px; /* Position it at the top */
+  right: 1000px; /* Position it to the left */
+}
+
+nav .back-button:hover {
+  color: #444;
+}
+
+header {
+  position: relative; /* Make the header position relative to position the back button correctly */
+}
+
+/* Add this to frs-styles.css */
+.demo-box {
+  background-color: rgba(
+    200,
+    197,
+    197,
+    0.7
+  ); /* A subtle dark color with some transparency */
+  color: #080404; /* White text color */
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 3D shadow effect */
+}
+
+.project-details-section {
+  padding: 20px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Slight transparency for effect */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 3D shadow effect */
+}
+
+.project-details-section h1 {
+  font-size: 2em;
+  margin-bottom: 20px; /* Increased margin to add space */
+  text-align: center;
+}
+
+.project-details-section h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.project-details-section p {
+  font-size: 1.2em;
+  color: #000;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: blur(0px); /* No blur effect */
+  z-index: -1; /* Ensure it is behind the content */
+}
+
+/* Add this to your main stylesheet (styles.css or frs-styles.css) */
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  perspective: 1000px; /* Adding perspective for 3D effect */
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-section.visible .content {
+  transform: rotateY(0deg); /* Rotate content to 3D effect */
+}
+
+.content {
+  transform: rotateY(20deg); /* Initial rotation */
+  transition: transform 0.6s ease-out; /* Smooth transition */
+}
