@@ -18,15 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(section);
   });
 
-  const progressBars = document.querySelectorAll(".progress-bar .skill-fill");
-
-  function animateProgressBars() {
-    progressBars.forEach((bar) => {
-      const width = bar.parentElement.getAttribute("data-width");
-      bar.style.width = width;
+  document.addEventListener("DOMContentLoaded", function () {
+    const circles = document.querySelectorAll(".circle");
+    circles.forEach((circle) => {
+      const percent = circle.getAttribute("data-percent");
+      circle.style.background = `conic-gradient(#000 0% ${percent}%, #f1f1f1 ${percent}% 100%)`;
     });
-  }
-
-  // Animate progress bars on initial load
-  animateProgressBars();
+  });
 });

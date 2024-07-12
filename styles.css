@@ -225,13 +225,14 @@ html {
 .skills-section h2 {
   font-size: 2em;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
 }
 
 .skills-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-top: 20px;
 }
 
 .skills-column {
@@ -250,36 +251,143 @@ html {
   width: 30%;
   font-weight: bold;
 }
-
-.progress-bar {
-  background-color: #f1f1f1;
-  border-radius: 5px;
-  overflow: hidden;
-  flex-grow: 1;
-  height: 20px;
+/* Circular skill bars */
+.circle {
+  width: 150px; /* Increased width */
+  height: 150px; /* Increased height */
+  background: conic-gradient(#000 0% 0%, #f1f1f1 0% 100%);
+  border-radius: 50%;
   position: relative;
+  margin: 10px auto;
 }
 
-.skill-fill {
-  background: #000; /* Black color for progress fill */
-  height: 100%;
-  border-radius: 5px;
+.circle-inner {
+  width: 120px; /* Adjusted to fit new circle size */
+  height: 120px; /* Adjusted to fit new circle size */
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  padding-right: 10px;
-  overflow: hidden;
-  width: 0; /* Start with width 0 */
-  transition: width 2s ease-out; /* Smooth animation */
+  justify-content: center;
 }
 
-/* Add responsive styles for skill columns and progress bars */
+.percentage {
+  font-size: 1.5em; /* Increased font size */
+  font-weight: bold;
+}
+
+/* Circular skill bars */
+.circle {
+  width: 150px; /* Increased width */
+  height: 150px; /* Increased height */
+  background: conic-gradient(#000 0% 0%, #f1f1f1 0% 100%);
+  border-radius: 50%;
+  position: relative;
+  margin: 10px auto;
+}
+
+.circle-inner {
+  width: 120px; /* Adjusted to fit new circle size */
+  height: 120px; /* Adjusted to fit new circle size */
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.percentage {
+  font-size: 1.5em; /* Increased font size */
+  font-weight: bold;
+}
+
+/* Circular skill bars */
+.circle {
+  width: 150px; /* Increased width */
+  height: 150px; /* Increased height */
+  background: conic-gradient(#000 0% 0%, #f1f1f1 0% 100%);
+  border-radius: 50%;
+  position: relative;
+  margin: 10px auto;
+}
+
+.circle-inner {
+  width: 120px; /* Adjusted to fit new circle size */
+  height: 120px; /* Adjusted to fit new circle size */
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.percentage {
+  font-size: 1.5em; /* Increased font size */
+  font-weight: bold;
+}
+
+/* Container for skill items */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.skill {
+  width: 30%; /* Adjust width as needed */
+  text-align: center;
+  margin-bottom: 90px; /* Increased margin to create more space between rows */
+}
+
+.skill-name {
+  margin-top: 20px; /* Increased margin-top to create space between circle and text */
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+
+/* Add specific styles for each percentage */
+.circle[data-percent="70"] {
+  background: conic-gradient(#000 0% 70%, #f1f1f1 70% 100%);
+}
+
+.circle[data-percent="80"] {
+  background: conic-gradient(#000 0% 80%, #f1f1f1 80% 100%);
+}
+
+.circle[data-percent="60"] {
+  background: conic-gradient(#000 0% 60%, #f1f1f1 60% 100%);
+}
+
+.circle[data-percent="100"] {
+  background: conic-gradient(#000 0% 100%, #f1f1f1 100% 100%);
+}
+
+.circle[data-percent="90"] {
+  background: conic-gradient(#000 0% 90%, #f1f1f1 90% 100%);
+}
+
+/* Responsive styles */
 @media (max-width: 768px) {
-  .skills-column {
-    width: 100%;
-    margin-bottom: 20px;
+  .skill {
+    width: 45%; /* Adjust width as needed */
   }
-  .progress-bar {
+}
+
+@media (max-width: 480px) {
+  .skill {
     width: 100%;
   }
 }
@@ -419,7 +527,7 @@ footer {
   color: #666;
 }
 .certificates-section {
-  padding: 0.5px 0;
+  padding: 15px 0;
 }
 
 .certificates-container {
@@ -534,7 +642,7 @@ footer {
 .portfolio-section h2 {
   font-size: 2em;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .portfolio-container {
